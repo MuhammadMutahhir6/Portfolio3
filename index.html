@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Rubik', sans-serif;
+      background-color: #0a0f1a;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px #00000099;
+    }
+    header {
+      background-color: #1f2a44;
+      padding: 20px;
+      text-align: center;
+      color: #e63946;
+      animation: fadeIn 1s ease-in;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    .profile-img {
+      display: block;
+      margin: 20px auto;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px #e63946;
+      transition: transform 0.3s ease;
+    }
+    .profile-img:hover {
+      transform: translateY(-10px);
+    }
+    nav {
+      background-color: #14213d;
+      text-align: center;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav a {
+      background-color: #e63946;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      background-color: #ba2d3b;
+      transform: scale(1.05);
+    }
+    section {
+      padding: 30px;
+      animation: fadeIn 1s ease-in;
+      border-bottom: 1px solid #1f2a44;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    section h2 {
+      text-decoration: underline;
+      text-shadow: 2px 2px 3px #00000088;
+      font-size: 2em;
+      color: #e63946;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    section h2:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Carousel container */
+    .carousel-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Carousel content */
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      width: 100%;
+    }
+
+    /* Individual cards */
+    .slide {
+      flex: 0 0 300px;
+      margin: 10px;
+      background-color: #1f2a44;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(230, 57, 70, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: translateY(10px);
+    }
+    .slide:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(230, 57, 70, 0.8);
+    }
+
+    .carousel-button {
+      background-color: #e63946;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .carousel-button:hover {
+      background-color: #ba2d3b;
+      transform: scale(1.05);
+    }
+
+    a {
+      color: #e63946;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive for mobile devices */
+    @media (max-width: 768px) {
+      .slide {
+        flex: 0 0 90%;
+        max-width: 90%;
+      }
+      .carousel-button {
+        padding: 8px 10px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Muhammad Mutahir</h1>
+    <p>Cybersecurity Enthusiast</p>
+    <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#skills">Skills</a>
+    <a href="#goals">Goals</a>
+    <a href="#inspiration">Inspiration</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a passionate and curious cybersecurity student with a deep interest in ethical hacking, system security, and digital forensics. Currently pursuing my degree in Cybersecurity, I am actively building hands-on experience through CTFs, personal security projects, and academic coursework.</p>
+  </section>
+
+  <section id="education">
+    <h2>Educational Background</h2>
+    <ul>
+      <li>BS Cybersecurity - FAST-NUCES (2024 - Present)</li>
+      <li>Intermediate - Pre-Engineering (A Grade)</li>
+      <li>O'Levels</li>
+    </ul>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievements</h2>
+    <div class="carousel-container">
+      <button class="carousel-button" onclick="scrollCarousel('achieveCarousel', -1)">&#8592;</button>
+      <div class="carousel" id="achieveCarousel">
+        <div class="slide">Gold Medalist - 1st Semester</div>
+        <div class="slide">Runner Up in Math Olampaid 2025</div>
+        <div class="slide">Participated in CTF, Hackathon, Coding Competitions</div>
+        <div class="slide">Completed Cyber Sentinel Toolkit</div>
+      </div>
+      <button class="carousel-button" onclick="scrollCarousel('achieveCarousel', 1)">&#8594;</button>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="carousel-container">
+      <button class="carousel-button" onclick="scrollCarousel('skillsCarousel', -1)">&#8592;</button>
+      <div class="carousel" id="skillsCarousel">
+        <div class="slide">Python, JavaScript</div>
+        <div class="slide">Linux & Bash Scripting</div>
+        <div class="slide">Networking & Firewalls</div>
+        <div class="slide">Web Security, Burp Suite</div>
+        <div class="slide">CTF & Bug Bounty Hunting</div>
+      </div>
+      <button class="carousel-button" onclick="scrollCarousel('skillsCarousel', 1)">&#8594;</button>
+    </div>
+  </section>
+
+  <section id="goals">
+    <h2>My Goals</h2>
+    <ul>
+      <li>Become a certified ethical hacker (CEH)</li>
+      <li>Work in a top cybersecurity firm</li>
+      <li>Start a blog for cybersecurity awareness</li>
+      <li>Contribute to open-source security projects</li>
+    </ul>
+  </section>
+
+  <section id="inspiration">
+    <h2>Inspiration</h2>
+    <p>My inspiration stems from real-world cyber threats and the ethical hackers who fight them daily. Influencers like Kevin Mitnick and platforms like TryHackMe & Hack The Box keep me motivated to learn and grow.</p>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Introduction to Cybersecurity - Cisco Networking Academy</li>
+      <li>Advent of Cyber - TryHackMe (2024)</li>
+      <li>Google IT Support Fundamentals</li>
+      <li>Burp Suite Basics - PortSwigger</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Information</h2>
+    <p>Email: mutahir@example.com</p>
+    <p>GitHub: <a href="https://github.com/MuhammadMutahhir6" target="_blank">github.com/MuhammadMutahhir6</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/muhammad-mutahir" target="_blank">linkedin.com/in/muhammad-mutahir</a></p>
+  </section>
+
+  <script>
+    function scrollCarousel(id, direction) {
+      const carousel = document.getElementById(id);
+      const scrollAmount = 320;
+      carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
